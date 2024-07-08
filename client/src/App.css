@@ -1,0 +1,148 @@
+/* =================================================================================== */
+/* Widget Black */
+/* =================================================================================== */
+.widgetBlack {
+  background: 
+  linear-gradient(180deg, rgba(39, 39, 43, 0.2) 0%, #26262900 100%) 40%,
+  linear-gradient(180deg, #3c3c3c 0%, #1d1d1d 100%) 100%;
+  background-blend-mode: multiply;
+}
+
+.widgetBlack-logo{
+  border: 2px solid #3c3c3c;
+  border-radius: 10px;
+  padding: 6px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.400) 0%, rgba(255,255,255,1) 100%);
+}
+
+.btn-view-widgetBlack,
+.btn-follow-widgetBlack {
+  font-size: 10px;
+  color: rgb(29, 29, 29);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.600) 0%, rgba(255,255,255,1) 100%);
+  -webkit-box-shadow: inset 0px 4px 6px 0px rgba(29, 29, 29, 0.3);
+  -moz-box-shadow: inset 0px 4px 6px 0px rgba(29, 29, 29, 0.3);
+  box-shadow: inset 0px 4px 6px 0px rgba(29, 29, 29, 0.3);
+}
+
+/* =================================================================================== */
+/* Button Arrow */
+/* =================================================================================== */
+.btn-arrow {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* =================================================================================== */
+/* Parent Grid */
+/* =================================================================================== */
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1.1fr) repeat(2, 1fr);
+  grid-column-gap: 14px;
+  grid-row-gap: 14px;
+  }
+  
+  .div1 { grid-area: 1 / 1 / 2 / 3; }
+  .div2 { grid-area: 1 / 3 / 3 / 5; }
+  .div3 { grid-area: 2 / 1 / 3 / 3; }
+  .div4 { grid-area: 3 / 1 / 4 / 5; }
+  .div5 { grid-area: 4 / 1 / 5 / 3; }
+  .div6 { grid-area: 4 / 3 / 5 / 5; }
+
+  .div1 .widgetBlack,
+  .div3 .widgetBlack {
+    gap: 1.7rem;
+  }
+  
+  .div2 .widgetBlack {
+    gap: 1.15rem;
+  }
+  
+
+/* =================================================================================== */
+/* Playlist Card */
+/* =================================================================================== */
+.playlist-card {
+  width: 7rem;
+  height: 8rem;
+}
+.playlist-image {
+  width: 6rem;
+  height: 3.7rem;
+}
+
+/* =================================================================================== */
+/* Animation */
+/* =================================================================================== */
+.scale-in-ver-center{animation:scale-in-ver-center 0.8s both}
+@keyframes scale-in-ver-center{0%{transform:scaleY(0);opacity:1}100%{transform:scaleY(1);opacity:1}}
+
+.scale-in-top{animation:scale-in-top 1s both}
+@keyframes scale-in-top{0%{transform:scale(0);transform-origin:50% 0;opacity:1}100%{transform:scale(1);transform-origin:50% 0;opacity:1}}
+
+.scale-in-top2{animation:scale-in-top 1s 0.1s both}
+@keyframes scale-in-top{0%{transform:scale(0);transform-origin:50% 0;opacity:1}100%{transform:scale(1);transform-origin:50% 0;opacity:1}}
+
+.focus-in-expand{animation:focus-in-expand 1s both}
+@keyframes focus-in-expand{0%{letter-spacing:-.5em;filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
+
+.div6{animation:fade-in-br 1000ms ease-in-out 450ms both}
+@keyframes fade-in-br{0%{transform:translateX(50px) translateY(50px);opacity:0}100%{transform:translateX(0) translateY(0);opacity:1}}
+
+.div5{animation:fade-in-bl 1000ms ease-in-out 400ms both}
+@keyframes fade-in-bl{0%{transform:translateX(-50px) translateY(50px);opacity:0}100%{transform:translateX(0) translateY(0);opacity:1}}
+
+.div4{animation:flip-in-hor-top 1000ms ease-in-out 350ms both}
+@keyframes flip-in-hor-top{0%{transform:rotateX(-80deg);opacity:0}100%{transform:rotateX(0);opacity:1}}
+
+.div3{animation:fade-in-bl 1000ms ease-in-out 300ms both}
+@keyframes fade-in-bl{0%{transform:translateX(-50px) translateY(50px);opacity:0}100%{transform:translateX(0) translateY(0);opacity:1}}
+
+.div2{animation:fade-in-br 1000ms ease-in-out 250ms both}
+@keyframes fade-in-br{0%{transform:translateX(50px) translateY(50px);opacity:0}100%{transform:translateX(0) translateY(0);opacity:1}}
+
+.div1{animation:fade-in-bl 1000ms ease-in-out 200ms both}
+@keyframes fade-in-bl{0%{transform:translateX(-50px) translateY(50px);opacity:0}100%{transform:translateX(0) translateY(0);opacity:1}}
+
+.pulsate-fwd{animation:pulsate-fwd .5s infinite both}
+@keyframes pulsate-fwd{0%{transform:scale(1)}50%{transform:scale(1.1)}100%{transform:scale(1)}}
+
+.widgetBlack:hover .btn-arrow {
+  animation:pulsate-fwd .5s infinite both
+}
+
+/* Section Widget */
+.flip-in-hor-bottom{animation:flip-in-hor-bottom 1000ms ease-in-out 150ms both}
+@keyframes flip-in-hor-bottom{0%{transform:rotateX(80deg);opacity:0}100%{transform:rotateX(0);opacity:1}}
+
+.tracking-in-expand-fwd{animation:tracking-in-expand-fwd 1s ease-in-out both}
+@keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{transform:translateZ(0);opacity:1}}
+
+.tracking-in-contract{animation:tracking-in-contract 1000ms ease-in-out both}
+@keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}
+
+/* Admin Name */
+.flip-in-hor-bottom-v2{animation:flip-in-hor-bottom 1000ms ease-in-out 100ms both}
+@keyframes flip-in-hor-bottom{0%{transform:rotateX(80deg);opacity:0}100%{transform:rotateX(0);opacity:1}}
+
+/* Photo Profile */
+.scale-in-center{animation:scale-in-center 1000ms ease-in-out 50ms both}
+@keyframes scale-in-center{0%{transform:scale(0);filter:blur(4px);opacity:1}100%{transform:scale(1);filter:blur(0);opacity:1}}
+
+/* Cover Picture */
+.puff-in-hor{animation:puff-in-hor 1000ms ease-in-out 0ms both}
+@keyframes puff-in-hor{0%{transform:scaleX(1.5);filter:blur(4px);opacity:0}100%{transform:scaleX(1);filter:blur(0);opacity:1}}
+
+/* Card */
+.card-1{animation:fade-in-fwd 200ms ease-in-out both}
+@keyframes fade-in-fwd{0%{transform:translateZ(-80px);opacity:0}100%{transform:translateZ(0);opacity:1}}
+
+.card-2{animation:card-2 500ms ease-in-out 0ms both}
+@keyframes card-2{0%{transform:scaleX(1.5);filter:blur(4px);opacity:0}100%{transform:scaleX(1);filter:blur(0);opacity:1}}
+
+@media (min-width: 768px) {
+  .md\:card-2 {
+    animation:card-2 1000ms ease-in-out both;
+  }
+}
