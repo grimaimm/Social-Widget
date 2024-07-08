@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
-import axios from 'axios';
+// import axios from 'axios';
+import links from './data/links.json';
 
 import CoverPicture from "./components/Profile/coverPicture";
 import PhotoProfile from "./components/Profile/photoProfile";
@@ -12,17 +13,23 @@ import SectionSocialLinks from "./components/Elemen/sectionSocialLinks";
 
 function App() {
 
-  const [links, setLinks] = useState([]);
+  // const [links, setLinks] = useState([]);
+
+  // useEffect(() => {
+
+  //   axios.get('/api/links')  // Permintaan GET ke endpoint /api/links
+  //     .then(response => {
+  //       setLinks(response.data);  // Menyimpan data respons ke state
+  //     })
+  //     .catch(error => {
+  //       console.error('Error fetching data:', error);
+  //     });
+  // }, []);
+
+  const [socialLinks, setSocialLinks] = useState([]);
 
   useEffect(() => {
-
-    axios.get('/api/links')  // Permintaan GET ke endpoint /api/links
-      .then(response => {
-        setLinks(response.data);  // Menyimpan data respons ke state
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
+    setSocialLinks(links);
   }, []);
 
 
@@ -44,7 +51,11 @@ function App() {
 
           <section>
             <div className="parent">
-            {links.map(link => (
+              {/* {links.map(link => (
+                // Memastikan setiap SectionSocialLinks menerima properti link yang sesuai
+                <SectionSocialLinks key={link.id} link={link} />
+              ))} */}
+              {socialLinks.map(link => (
                 // Memastikan setiap SectionSocialLinks menerima properti link yang sesuai
                 <SectionSocialLinks key={link.id} link={link} />
               ))}
